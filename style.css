@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e66eaa;
+}
+
+.heart{
+    height: 250px;
+    width: 250px;
+    background-color: red;
+    position: relative;
+    transform: rotate(45deg);
+    box-shadow: -20px 20px 150px #f20044;
+    animation: palpitar 0.6s linear infinite alternate ;
+}
+
+.texto{
+    position: fixed;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+h1{
+    color: black;
+}
+
+h3{
+    color: black;
+}
+
+@keyframes palpitar{
+    0%{transform: rotate(45deg) scale(1.10);}
+    80%{transform: rotate(45deg) scale(1.0);}
+    100%{transform: rotate(45deg) scale(0.8);}
+}
+.heart::before{
+    content: "";
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    right: 50%;
+    background: red;
+    border-radius: 100%;
+    box-shadow: 20px 20px 150px #f20044;
+}
+
+.heart::after{
+    content: "";
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    top: -50%;
+    background: red;
+    border-radius: 100%;
+    box-shadow: 20px 20px 150px #f20044;
+}
